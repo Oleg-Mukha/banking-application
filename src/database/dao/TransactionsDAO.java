@@ -1,5 +1,9 @@
 package database.dao;
 
-public interface TransactionsDAO {
+import data.Transaction;
 
+import java.util.ArrayList;
+
+public interface TransactionsDAO {
+    ArrayList<Transaction> showTransactions();
 }
