@@ -1,5 +1,8 @@
+import database.TransactionServiceMySQL;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        TransactionServiceMySQL transactionServiceMySQL = new TransactionServiceMySQL();
+        System.out.println(transactionServiceMySQL.showTransactions());
     }
 }
