@@ -1,8 +1,7 @@
-import database.TransactionServiceMySQL;
+import gui.MainScreen;
 
 public class Main {
     public static void main(String[] args) {
-        TransactionServiceMySQL transactionServiceMySQL = new TransactionServiceMySQL();
-        System.out.println(transactionServiceMySQL.showTransactions());
+        new MainScreen();
     }
 }

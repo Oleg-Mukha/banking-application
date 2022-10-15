@@ -8,6 +8,19 @@ public class Transaction {
     String senderCard;
     String receiverCard;
     double sum;
+    double currentBalance;
+
+    public Transaction() {
+    }
+
+    public Transaction(Date currentDate, String nameTransaction, String senderCard, String receiverCard, double sum, double currentBalance) {
+        this.currentDate = currentDate;
+        this.nameTransaction = nameTransaction;
+        this.senderCard = senderCard;
+        this.receiverCard = receiverCard;
+        this.sum = sum;
+        this.currentBalance = currentBalance;
+    }
 
     public Date getCurrentDate() {
         return currentDate;
@@ -49,14 +62,16 @@ public class Transaction {
         this.sum = sum;
     }
 
+    public double getCurrentBalance() {
+        return currentBalance;
+    }
+
+    public void setCurrentBalance(double currentBalance) {
+        this.currentBalance = currentBalance;
+    }
+
     @Override
     public String toString() {
-        return "Transaction{" +
-                "currentDate=" + currentDate +
-                ", nameTransaction='" + nameTransaction + '\'' +
-                ", senderCard='" + senderCard + '\'' +
-                ", receiverCard='" + receiverCard + '\'' +
-                ", sum=" + sum +
-                '}';
+        return "| " + currentDate + " | " + nameTransaction + " | " + sum + " | ";
     }
 }
